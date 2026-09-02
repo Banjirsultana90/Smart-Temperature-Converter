@@ -1,9 +1,9 @@
 import 'dart:io';
 
-void main() {
-  String again = 'y';
+ main() {
+  String another = 'y';
 
-  while (again.toLowerCase() == 'y') {
+  while (another== 'y') {
     print("====================================");
     print("       SMART TEMPERATURE CONVERTER");
     print("====================================");
@@ -20,7 +20,7 @@ void main() {
     int choice = int.parse(stdin.readLineSync()!);
 
     if (choice == 7) {
-      break;
+
     }
 
     stdout.write("Enter temperature: ");
@@ -30,39 +30,39 @@ void main() {
       case 1:
         double result = (temperature * 9 / 5) + 32;
         print("$temperature°C = ${result.toStringAsFixed(2)}°F");
-        break;
+
 
       case 2:
         double result = (temperature - 32) * 5 / 9;
         print("$temperature°F = ${result.toStringAsFixed(2)}°C");
-        break;
+
 
       case 3:
         double result = temperature + 273.15;
         print("$temperature°C = ${result.toStringAsFixed(2)} K");
-        break;
+
 
       case 4:
         double result = temperature - 273.15;
         print("$temperature K = ${result.toStringAsFixed(2)}°C");
-        break;
+
 
       case 5:
         double result = (temperature - 32) * 5 / 9 + 273.15;
         print("$temperature°F = ${result.toStringAsFixed(2)} K");
-        break;
+
 
       case 6:
         double result = (temperature - 273.15) * 9 / 5 + 32;
         print("$temperature K = ${result.toStringAsFixed(2)}°F");
-        break;
+
 
       default:
         print("Invalid choice!");
     }
 
     stdout.write("Do you want to perform another conversion? (y/n): ");
-    again = stdin.readLineSync()!;
+    another = stdin.readLineSync()!;
     print("");
   }
 
