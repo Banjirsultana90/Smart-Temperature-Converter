@@ -1,4 +1,3 @@
-// import 'dart:io';
 //
 //  main() {
 //   String another = 'y';
@@ -71,49 +70,60 @@
 //   print("       Program Ended");
 //   print("====================================");
 // }
+import 'dart:io';
 
 void main(){
-  print("====================================");
-  print(" SMART TEMPERATURE CONVERTER");
-  print("====================================");
+  String another='y';
+  while(another=='y'){
+    print("====================================");
+    print(" SMART TEMPERATURE CONVERTER");
+    print("====================================");
 
-      print("1. Celsius to Fahrenheit");
+    print("1. Celsius to Fahrenheit");
     print("2. Fahrenheit to Celsius");
     print("3. Celsius to Kelvin");
     print("4. Kelvin to Celsius");
     print("5. Fahrenheit to Kelvin");
     print("6. Kelvin to Fahrenheit");
     print("7. Exit");
-    int temperature=14;
-  var choice=1;
+    stdout.write("Enter your choice: ");
+    int choice = int.parse(stdin.readLineSync()!);
 
-switch(choice){
-  case 1:
+    if (choice == 7) {
+
+    }
+
+    stdout.write("Enter temperature: ");
+    double temperature = double.parse(stdin.readLineSync()!);
+
+
+    switch(choice){
+      case 1:
         double result = (temperature * 9 / 5) + 32;
-        print("$temperature°C = ${result.toStringAsFixed(2)}°F");
-  case 2:
+        print("$temperature°C = $result°F");
+      case 2:
         double result = (temperature - 32) * 5 / 9;
-        print("$temperature°F = ${result.toStringAsFixed(2)}°C");
+        print("$temperature°F = $result°C");
 
 
       case 3:
         double result = temperature + 273.15;
-        print("$temperature°C = ${result.toStringAsFixed(2)} K");
+        print("$temperature°C = $result K");
 
 
       case 4:
         double result = temperature - 273.15;
-        print("$temperature K = ${result.toStringAsFixed(2)}°C");
+        print("$temperature K = $result°C");
 
 
       case 5:
         double result = (temperature - 32) * 5 / 9 + 273.15;
-        print("$temperature°F = ${result.toStringAsFixed(2)} K");
+        print("$temperature°F = $result K");
 
 
       case 6:
         double result = (temperature - 273.15) * 9 / 5 + 32;
-        print("$temperature K = ${result.toStringAsFixed(2)}°F");
+        print("$temperature K = $result°F");
 
 
       default:
@@ -122,6 +132,8 @@ switch(choice){
 
 
 
+
+  }
 
 
 
